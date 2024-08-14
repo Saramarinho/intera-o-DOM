@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação e Estilização com o DOM!</title>
+</head>
+<body><!-- 
+    <script>
+        function exibirTexto() {
+           let texto= document.getElementById("campoTexto").value;
+         let paragrafo = document.getElementById("resultado");
+         if (texto.trim()=== "")
+         {
+            paragrafo.textContent = "Por favor, insira um texto.";
+         }   else{
+            paragrafo.textContent = texto;
+         }
+        }
+    </script>
+    <h1>Interação com o DOM</h1>
+    <input type="text" id="campoTexto" placeholder="Digite algo aqui">
+    <button onclick="exibirTexto()">Mostrar Texto</button>
+    <p id="resultado"></p>-->
+    <script>
+        function mudarCor(cor){
+            document.getElementById("titulo").style.color= cor;
+        }
+    </script>
+</body>
+<h1 id="titulo">Este é o título</h1>
+<button onclick="mudarCor('green')">Mudar para Verde</button>
+</html>
