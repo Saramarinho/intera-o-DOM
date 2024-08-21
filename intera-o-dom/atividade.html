@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+</head>
+<body>
+    <input type="text" id="itemInput" placeholder="Digite um item">
+    <button id="addButton">Adicionar</button>
+    <button id="removeButton">Remover Último</button>
+    <ul id="itemdaLista"></ul>
+
+     <script>
+        const ul = document.getElementById('itemdaLista')
+        document.getElementById('addButton').addEventListener('click', () => {
+            let input = document.getElementById('itemInput').value
+            let li = document.createElement('li')
+            li.textContent = input
+            ul.appendChild(li)
+        })
+        document.getElementById('removeButton').addEventListener('click', () => {
+            ul.removeChild(ul.lastChild)
+        })
+     </script>
+</body>
+</html>
